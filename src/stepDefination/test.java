@@ -20,22 +20,23 @@ public class test {
 		System.setProperty("webdriver.chrome.driver","D:\\chromedriver.exe");
 		Driver = new ChromeDriver();
 		Driver.get("https://v2-pre-prod-app.krossover.com/intelligence/login");
+		Driver.manage().window().maximize();
 	}
 	
 	@When("^user is on home page$")
 	public void user_is_on_home_page() throws Throwable {
 	   System.out.println("Login Page displayed ");
-	    throw new PendingException();
+	    
 	}    
 	
 	@When("^User enter the valid credentail$")
 	public void user_enter_the_valid_credentail() throws Throwable {
 	    
-		Driver.findElement(By.name("email")).sendKeys("adityakumar643@gmail.com");
-		Driver.findElement(By.name("password")).sendKeys("Welcome@home");
+		Driver.findElement(By.xpath("html/body/section/div[3]/main/div/form/div[1]/input")).sendKeys("adityakumar643@gmail.com");
+		Driver.findElement(By.xpath("html/body/section/div[3]/main/div/form/div[2]/input")).sendKeys("Welcome@home");
 		Driver.findElement(By.id("sign-in-cta")).click();
 		Driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
-	    throw new PendingException();
+	    
 	}
 	
 	@Then("^message displayed Login Successfully \\.$")

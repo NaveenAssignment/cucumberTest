@@ -1,8 +1,5 @@
-package cucumber_Test;
-
-
+package cucumber_Login;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -20,6 +17,7 @@ public class Login {
 				Driver.findElement(By.name("email")).sendKeys("adityakumar643@yahoo.com");
 				Driver.findElement(By.name("password")).sendKeys("password");
 				Driver.findElement(By.id("sign-in-cta")).click();
+				System.out.println("DOne");
 					
 	 
 }
