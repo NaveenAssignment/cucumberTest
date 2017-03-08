@@ -17,7 +17,7 @@ public class Login {
 				Driver.findElement(By.name("email")).sendKeys("adityakumar643@yahoo.com");
 				Driver.findElement(By.name("password")).sendKeys("password");
 				Driver.findElement(By.id("sign-in-cta")).click();
-				System.out.println("DOne");
+				System.out.println("Done");
 					
 	 
 }
