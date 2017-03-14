@@ -18,7 +18,7 @@ public class Login {
 				Driver.findElement(By.name("password")).sendKeys("password");
 				Driver.findElement(By.id("sign-in-cta")).click();
 				System.out.println("Done");
-	// End of script 				
+	 				
 	 
 }
 }
